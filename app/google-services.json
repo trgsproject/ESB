@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1076733171595",
+    "project_id": "esanotification-cfa8f",
+    "storage_bucket": "esanotification-cfa8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076733171595:android:d2d9497c63b6d467c0418e",
+        "android_client_info": {
+          "package_name": "com.example.esa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076733171595-dp8amsneheijvr9q8abjqir76juta7n5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.esa",
+            "certificate_hash": "020b90e8e2bfa22199971054a6eb6aab210592dd"
+          }
+        },
+        {
+          "client_id": "1076733171595-pttejttgq2fqb1kqrsfct9q92grc8bl4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8yoUoH7mlK6ttKFbwIN-qhAISuf3Ig70"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076733171595-pttejttgq2fqb1kqrsfct9q92grc8bl4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

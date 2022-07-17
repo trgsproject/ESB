@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape"
+    tools:context=".Dashboard">
+
+    <!--bottom navigation-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation_anes"
+        android:layout_alignParentBottom="true"/>
+
+    <!--for linear layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--for title, occupation and inbox-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#BC7DC0"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/full_name_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/bungee"
+                android:includeFontPadding="false"
+                android:text="ESB"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/textViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/full_name_profile"
+                android:includeFontPadding="false"
+                android:text="Hi Username"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/white"
+                android:textSize="17sp" />
+
+
+        </RelativeLayout>
+
+
+        <!--for category-->
+        <LinearLayout
+            android:id="@+id/up"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="-60dp"
+            android:padding="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/shape3">
+
+
+            <!--for card patient list-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPatientList"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#F8F8F8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/patient"
+                        android:layout_marginTop="0dp"/>
+
+                    <TextView
+                        android:id="@+id/full_name_uni4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="Patient"
+                        android:layout_marginTop="50dp"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--for card waiting patient list-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardWaitingPatientList"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#F8F8F8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/waitingpatientlist"
+                        android:layout_marginTop="0dp"/>
+
+                    <TextView
+                        android:id="@+id/full_name_uni2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="Waiting List"
+                        android:layout_marginTop="50dp"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--for card category schedule list-->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCategory"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#F8F8F8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/schedulelist"
+                        android:layout_marginTop="0dp"/>
+
+                    <TextView
+                        android:id="@+id/full_name_uni1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="Schedule List"
+                        android:layout_marginTop="50dp"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!--for card category surgeon list -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSurgeon"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="#F8F8F8">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/surgeon"
+                        android:layout_marginTop="0dp"/>
+
+                    <TextView
+                        android:id="@+id/full_name_uni3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:includeFontPadding="false"
+                        android:text="Surgeon"
+                        android:layout_marginTop="50dp"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+        </LinearLayout>
+
+
+        <!--for view pager/ table of descriptor clinical-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="55dp">
+
+            <!--table category a,b,c,d,e-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_margin="20dp">
+
+                    <!-- Table Heading -->
+                    <TableRow
+                        android:background="@color/black">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/col1"
+                            android:textColor="@color/white"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/col2"
+                            android:textColor="@color/white"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/col3"
+                            android:textColor="@color/white"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+
+                    </TableRow>
+
+                    <!-- Table Data Row 1 -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row1a"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="12sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row1b"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text=" 1 hour"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+
+                    </TableRow>
+
+                    <!-- Table Data Row 2 -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row2a"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="12sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row2b"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="4 hours"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+
+                    </TableRow>
+
+                    <!-- Table Data Row 3 -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row3a"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="12sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row3b"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="24 hours"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+
+                    </TableRow>
+
+                    <!-- Table Data Row 4 -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row4a"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="12sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row4b"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="10 days"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+
+                    </TableRow>
+
+                    <!-- Table Data Row 5 -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row5a"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="12sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row5b"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="start"
+                            android:layout_marginBottom="10dp"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="10 days"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"
+                            android:layout_marginBottom="10dp"/>
+
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

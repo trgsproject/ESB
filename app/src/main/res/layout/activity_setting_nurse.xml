@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingNurse">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/bungee"
+        android:text="Settings"
+        android:textAllCaps="false"
+        android:textColor="#640064"
+        android:textSize="32dp" />
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:src="@drawable/emergency"
+        android:scaleType="fitCenter"
+        android:layout_below="@+id/tv1"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation_anes"
+        android:layout_alignParentBottom="true"/>
+
+    <LinearLayout
+        android:layout_width="440dp"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/img1"
+        android:orientation="vertical"
+        android:layout_marginTop="-30dp">
+
+        <!-- my personal details -->
+        <RelativeLayout
+            android:id="@+id/Relative1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/personalDetails"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:background="@drawable/shape"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/profile"
+                android:layout_centerVertical="true"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My Personal Details"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="15dp"/>
+
+        </RelativeLayout>
+
+        <!-- change password -->
+        <RelativeLayout
+            android:id="@+id/Relative2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/changePassword"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:background="@drawable/shape"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/password"
+                android:layout_centerVertical="true"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Password"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="15dp"/>
+
+        </RelativeLayout>
+
+        <!-- web htcm -->
+        <RelativeLayout
+            android:id="@+id/Relative3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/htcm"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:background="@drawable/shape" />
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/hospital"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HCTM"
+                android:textSize="22sp"
+                android:layout_marginLeft="80dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"/>
+
+        </RelativeLayout>
+
+        <!-- about -->
+        <RelativeLayout
+            android:id="@+id/Relative4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/about"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:background="@drawable/shape"/>
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/about"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About"
+                android:textSize="22sp"
+                android:layout_marginLeft="80dp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"/>
+
+        </RelativeLayout>
+
+        <!-- logout -->
+        <RelativeLayout
+            android:id="@+id/Relative5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="380dp"
+                android:layout_height="60dp"
+                android:background="@drawable/shape"/>
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/logout"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="15dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewSurgeon"
+    android:padding="15dp"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/general_back_icon"
+            android:padding="5dp"
+            android:onClick="back"/>
+
+        <ImageView
+            android:layout_width="360dp"
+            android:layout_height="240dp"
+            android:src="@drawable/emergency"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/bungee"
+            android:gravity="center"
+            android:text="New Surgeon"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#640064"
+            android:textSize="25sp" />
+
+
+        <EditText
+            android:id="@+id/textEmail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="Email" />
+
+        <EditText
+            android:id="@+id/textSurgeonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Surgeon Name"
+            android:textStyle="bold"
+            android:textColor="#0E1822"
+            android:layout_marginTop="50dp"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="15dp"
+            android:padding="15dp"
+            android:background="@drawable/mybutton"/>
+
+
+        <AutoCompleteTextView
+            android:id="@+id/textSubSpeciality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sub Speciality"
+            android:textStyle="bold"
+            android:textColor="#0E1822"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_baseline_work_24"
+            android:drawablePadding="15dp"
+            android:padding="15dp"
+            android:background="@drawable/mybutton"/>
+
+
+
+        <Button
+            android:id="@+id/buttonSavePassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Register"
+            android:background="@drawable/round_button3"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            app:backgroundTint="#640064"
+            android:onClick="InsertSurgeon"/>
+
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/profile_image"
+            android:fontFamily="@font/bungee"
+            android:includeFontPadding="false"
+            android:text="alifirfanz"
+            android:textColor="#fff"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:textSize="12sp" />
+
+
+
+    </LinearLayout>
+
+</ScrollView>

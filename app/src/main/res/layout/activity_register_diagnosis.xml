@@ -1,0 +1,620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterDiagnosis"
+    android:orientation="vertical"
+    android:background="#0E1822">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottom_navigation">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <!-- title -->
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="19dp"
+                    android:text="Register Diagnosis"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textID"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="18sp" />
+
+                <!-- id patient -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewMRN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MRN"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textMRN"
+                    android:hint="MRN"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:ems="10"
+                    android:background="@drawable/shape5"
+                    android:textColor="#808080"
+                    android:textColorHint="#6B6B6B"
+                    android:enabled="false"
+                    android:drawableEnd="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="15dp"
+                    android:padding="15dp" />
+
+
+                <!-- name patient -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Name"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textName"
+                    android:hint="Patient Name"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape5"
+                    android:padding="15dp"
+                    android:textColor="#808080"
+                    android:textColorHint="#6B6B6B"
+                    android:enabled="false"
+                    android:drawableEnd="@drawable/ic_baseline_lock_24"/>
+
+
+                <!-- Nurse ID -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewNurseID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nurse ID"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp"  />
+
+                <EditText
+                    android:id="@+id/textNurseID"
+                    android:hint="Nurse ID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape5"
+                    android:padding="15dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp"
+                    android:textColorHint="#6B6B6B"
+                    android:enabled="false"
+                    android:drawableEnd="@drawable/ic_baseline_lock_24"/>
+
+
+
+                <!-- time Arrival -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewTimeArrival"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arrival Time to Emergency Department"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp"  />
+
+                <EditText
+                    android:id="@+id/textTimeArrival"
+                    android:hint="0000-00-00 00:00:00"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:enabled="false"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:padding="15dp"
+                    android:textColor="#808080"
+                    android:textColorHint="#6B6B6B"
+                    android:background="@drawable/shape5"
+                    android:drawableEnd="@drawable/ic_baseline_lock_24"/>
+
+
+                <!-- Last Meal time-->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewLastMealDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Meal (Date)*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textLastMealDate"
+                    android:hint="0000-00-00"
+                    android:completionThreshold="1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_baseline_calendar_month_24"
+                    android:textColor="@color/black" />
+
+
+                <!-- Last Meal -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewLastMealTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Meal (Time)*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textLastMealTime"
+                    android:hint="00:00:00"
+                    android:completionThreshold="1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_baseline_access_time_24"
+                    android:textColor="@color/black"/>
+
+
+
+                <!-- patient Book OT
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewBookOT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book OT"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/textBookOT"
+                    android:hint="Book OT"
+                    android:completionThreshold="1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:textColorHint="@color/black"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black" />
+                -->
+
+                <!-- Surgery Date -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewBookSurgeryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book Surgery Date"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textBookSurgeryDate"
+                    android:hint="0000-00-00"
+                    android:enabled="false"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:padding="15dp"
+                    android:textColor="#6B6B6B"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/shape2"
+                    android:drawableEnd="@drawable/ic_baseline_lock_24" />
+
+
+
+                <!-- Surgery Time
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewBookSurgeryTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book Surgery Time*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textBookSurgeryTime"
+                    android:hint="00:00:00"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:textColorHint="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_baseline_access_time_24"
+                    android:textColor="@color/black"  />
+                -->
+
+                <!-- Surgery Duration
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewSurgeryDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Estimate Surgery Duration (minutes)*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#000"
+                    android:textSize="15sp"  />
+
+                <Spinner
+                    android:id="@+id/textSurgeryDuration"
+                    android:hint="Surgery Duration"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    style="@android:style/Widget.Spinner"
+                    android:padding="15dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#6B6B6B" />
+                -->
+
+                <!-- Surgical team -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewSurgicalTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Surgeon Name*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/textSurgicalTeam"
+                    android:hint="Surgeon Name"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black"/>
+
+
+                <!-- Sub Specialty -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewsSubSpecialty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Specialty*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/textSubSpecialty"
+                    android:hint="Sub Specialty"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black" />
+
+
+
+                <!-- Procedure Name -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewProcedureName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Procedure Name*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp"  />
+
+                <AutoCompleteTextView
+                    android:id="@+id/textProcedureName"
+                    android:hint="Procedure Name 1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black" />
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ed_ProcedureName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Procedure Name 2"
+                        android:textSize="16sp"
+                        android:background="@drawable/shape2"
+                        android:visibility="gone"
+                        android:layout_marginLeft="30dp"
+                        android:paddingStart="10dp"
+                        android:padding="15dp"
+                        android:layout_weight="1"/>
+
+
+                    <ImageView
+                        android:id="@+id/image_remove1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:tint="@color/black"
+                        android:visibility="gone"
+                        android:layout_marginRight="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_close_24"
+                        android:onClick="RemoveProcedureName2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ed_ProcedureName3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Procedure Name 3"
+                        android:textSize="16sp"
+                        android:background="@drawable/shape2"
+                        android:layout_marginLeft="30dp"
+                        android:visibility="gone"
+                        android:paddingStart="10dp"
+                        android:padding="15dp"
+                        android:layout_weight="1"/>
+
+
+                    <ImageView
+                        android:id="@+id/image_remove2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:tint="@color/black"
+                        android:visibility="gone"
+                        android:layout_marginRight="30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_close_24"
+                        android:onClick="RemoveProcedureName3"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/buttonAddProcedure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addProcedure"
+                    android:textColor="#800080"
+                    android:textAlignment="viewEnd"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:onClick="AddProcedure" />
+
+
+                <!-- name diagnosis desc -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/view_name_diagnosis_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Diagnosis Description*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textNameDiagnosisDesc"
+                    android:hint="Diagnosis Description"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black"/>
+
+
+
+
+
+                <!-- approved status -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewApprovedStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="18sp" />
+
+
+
+                <!-- button cancel and save -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    tools:layout_editor_absoluteX="-16dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <Button
+                        android:id="@+id/buttonCancel"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/red_bg"
+                        android:text="Cancel"
+                        android:layout_marginRight="5dp"
+                        android:textAllCaps="false"
+                        android:textColor="#FAF6F6"
+                        android:textStyle="bold"
+                        app:backgroundTint="#FF0000"
+                        app:cornerRadius="10dp"
+                        app:elevation="3dp"
+                        app:strokeColor="#FF0000"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/buttonSave"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/green_bg"
+                        android:text="Save"
+                        android:layout_marginLeft="5dp"
+                        android:textAllCaps="false"
+                        android:textColor="#FAF6F6"
+                        android:textStyle="bold"
+                        app:backgroundTint="#32CD32"
+                        app:cornerRadius="10dp"
+                        app:elevation="3dp"
+                        app:strokeColor="#32CD32"
+                        app:strokeWidth="1dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

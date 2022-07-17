@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".ClassifyCategory">
+
+
+    <!--for linear layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--for title, username -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+
+            <TextView
+                android:id="@+id/textID"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_alignParentStart="true"
+                android:includeFontPadding="false"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewPatientID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:includeFontPadding="false"
+                android:text="MRN  : N669722"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/textViewPatientIDText"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+            <TextView
+                android:id="@+id/textViewPatientNameText"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:id="@+id/textViewAnaesthetistName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:id="@+id/textViewQuestion"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+        </RelativeLayout>
+
+
+        <!--for title, username -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:layout_marginTop="-30dp">
+
+            <TextView
+                android:id="@+id/textViewPatientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true"
+                android:includeFontPadding="false"
+                android:text="Name: WAN ZURIATI"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+
+        <!--for text -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="-20dp">
+
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:includeFontPadding="false"
+                android:text="@string/title"
+                android:textColor="#808080"
+                android:textSize="14sp"
+                android:layout_marginStart="3dp"/>
+
+
+            <TextView
+                android:id="@+id/textArrivalTime"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+
+
+        </RelativeLayout>
+
+
+
+        <!--for view pager-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="-40dp"
+            android:layout_marginBottom="55dp">
+
+            <!--table category a,b,c,d,e-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-10dp"
+                android:layout_marginBottom="10dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_margin="20dp">
+
+                    <!-- Table Heading -->
+                    <TableRow
+                        android:background="@color/green">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/col2"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="center_horizontal"/>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Score (x/100)"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+
+                    </TableRow>
+
+                    <!-- Table Data Row 1 -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/question1"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row1b"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="15sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+
+                        <EditText
+                            android:id="@+id/num1"
+                            android:layout_width="0dp"
+                            android:text="0"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:layout_weight="4"
+                            android:layout_marginTop="7dp"
+                            android:textColor="#0E1822"
+                            android:hint="0/100"
+                            android:background="@drawable/mybutton2"
+                            android:inputType="number"/>
+
+
+
+
+
+                    </TableRow>
+
+
+
+                    <!-- Table space -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+
+                    </TableRow>
+
+
+                    <!-- Table Data Row 2 -->
+                    <TableRow
+                        android:background="@color/white">
+
+
+                        <TextView
+                            android:id="@+id/question2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row2b"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="15sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+                        <EditText
+                            android:id="@+id/num2"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="0"
+                            android:layout_weight="4"
+                            android:layout_marginTop="37dp"
+                            android:textColor="#0E1822"
+                            android:hint="0/100"
+                            android:background="@drawable/mybutton2"
+                            android:inputType="number"/>
+
+
+                    </TableRow>
+
+                    <!-- Table space -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+
+                    </TableRow>
+
+                    <!-- Table Data Row 3 -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/question3"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row3b"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="15sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+                        <EditText
+                            android:id="@+id/num3"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="0"
+                            android:layout_weight="4"
+                            android:layout_marginTop="17dp"
+                            android:textColor="#0E1822"
+                            android:hint="0/100"
+                            android:background="@drawable/mybutton2"
+                            android:inputType="number"/>
+
+
+                    </TableRow>
+
+                    <!-- Table Data Row 4 -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:id="@+id/question4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/row4b"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="15sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+                        <EditText
+                            android:id="@+id/num4"
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:gravity="center"
+                            android:text="0"
+                            android:layout_weight="4"
+                            android:layout_marginTop="27dp"
+                            android:textColor="#0E1822"
+                            android:hint="0/100"
+                            android:background="@drawable/mybutton2"
+                            android:inputType="number"/>
+
+
+                    </TableRow>
+
+                    <!-- Table space -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+
+                    </TableRow>
+
+                    <!-- Table Data Row 5 -->
+                    <TableRow
+                        android:background="@color/white">
+
+
+                        <TextView
+                            android:id="@+id/ViewScore"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:text="Highest Score: "
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_weight="6"
+                            android:textAlignment="viewEnd"/>
+
+                        <TextView
+                            android:id="@+id/score"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:background="@drawable/shape5"
+                            android:layout_weight="6"
+                            android:textAlignment="center"/>
+
+                        <TextView
+                            android:id="@+id/ViewCategory"
+                            android:layout_width="65dp"
+                            android:layout_height="wrap_content"
+                            android:text="Category:"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_weight="4"
+                            android:textAlignment="viewEnd"/>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/category"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_weight="4"
+                            android:background="@drawable/mybutton2"
+                            android:textAlignment="center"/>
+
+
+                    </TableRow>
+
+
+                    <!-- Table space -->
+                    <TableRow
+                        android:background="@color/white">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="6"
+                            android:gravity="start"/>
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:textColor="@color/black"
+                            android:padding="10dp"
+                            android:textSize="14sp"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"/>
+
+
+                    </TableRow>
+
+
+
+                </TableLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+        <!-- button cancel and save -->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="-60dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <Button
+                android:id="@+id/buttonCancelCategory"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/green_bg"
+                android:text="Cancel"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:textAllCaps="false"
+                android:textColor="#FAF6F6"
+                android:textStyle="bold"
+                app:backgroundTint="#FF0000"
+                app:cornerRadius="10dp"
+                app:elevation="3dp"
+                app:strokeColor="#FF0000"
+                app:strokeWidth="1dp"/>
+
+            <Button
+                android:id="@+id/buttonSaveCategory"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/red_bg"
+                android:layout_marginLeft="5dp"
+                android:textAllCaps="false"
+                android:textColor="#FAF6F6"
+                android:textStyle="bold"
+                android:text="Save"
+                app:backgroundTint="#32CD32"
+                app:cornerRadius="10dp"
+                app:elevation="3dp"
+                app:strokeColor="#32CD32"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientEditDiagnosis"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottom_navigation">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <!-- title -->
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="19dp"
+                    android:text="Diagnosis Details"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- id patient -->
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:hint="ID"
+                    android:id="@+id/ed_id"
+                    android:enabled="false"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="10dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MRN"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="MRN"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/ed_mrn"
+                    android:textSize="16sp"
+                    android:background="@drawable/shape5"
+                    android:enabled="false"
+                    android:paddingStart="10dp"
+                    android:drawableEnd="@drawable/ic_lock"
+                    android:drawablePadding="15dp"
+                    android:padding="15dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Name"
+                    android:id="@+id/ed_PatientName"
+                    android:textSize="16sp"
+                    android:enabled="false"
+                    android:drawableEnd="@drawable/ic_lock"
+                    android:drawablePadding="15dp"
+                    android:padding="15dp"
+                    android:background="@drawable/shape5"
+                    android:textAllCaps="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingStart="10dp" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OT Room"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="OT Room"
+                    android:id="@+id/ed_otroom"
+                    android:textSize="16sp"
+                    android:background="@drawable/shape2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingStart="10dp"/>
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Book Surgery Time"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Surgery Time"
+                    android:id="@+id/ed_surgeryTime"
+                    android:drawableEnd="@drawable/ic_baseline_access_time_24"
+                    android:textSize="16sp"
+                    android:background="@drawable/shape2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:drawablePadding="15dp"
+                    android:padding="15dp"
+                    android:paddingStart="10dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Surgery Duration"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Surgery Duration"
+                    android:id="@+id/ed_SurgeryDuration"
+                    android:textSize="16sp"
+                    android:background="@drawable/shape2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingStart="10dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Diagnosis Description"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:hint="Diagnosis Description"
+                    android:id="@+id/ed_DiagnosisDescription"
+                    android:textSize="16sp"
+                    android:background="@drawable/shape2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingStart="10dp" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Procedure Name"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp" />
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:hint="Procedure Name"
+                    android:id="@+id/ed_ProcedureName"
+                    android:textSize="16sp"
+                    android:background="@drawable/shape2"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:paddingStart="10dp" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:hint="Approved Status"
+                    android:id="@+id/ed_ApprovedStatus"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/shape2"
+                    android:paddingStart="10dp" />
+
+
+                <!-- time approval -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textTimeApproval"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"/>
+
+
+                <!-- anaesthetist id -->
+                <TextView
+                    android:id="@+id/textViewAnaesthetistID"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/buttonCheckInOt"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/blue_bg"
+                    android:text="Update"
+                    android:backgroundTint="#BC7DC0"
+                    app:backgroundTint="#BC7DC0"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:onClick="btn_updateData"
+                    android:textColor="#FAF6F6"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="30dp"/>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>

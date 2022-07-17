@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterPatientAfterLogin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="5dp"
+            android:background="@drawable/grey_background"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="5dp"
+            android:text=" Close "
+            android:textColor="#6B6B6B"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:src="@drawable/bannerpatient" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_background"
+            android:layout_marginTop="-50dp">
+
+            <LinearLayout
+                android:id="@+id/linearNameAndSubSpecialty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewUserName"
+                    android:text="Username"
+                    android:textSize="20sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="19dp"/>
+
+                <TextView
+                    android:id="@+id/textViewUserfullname"
+                    android:text="Name"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="19dp"/>
+
+                <TextView
+                    android:id="@+id/textViewUserSubspe"
+                    android:text="Subspeciality"
+                    android:textSize="15sp"
+                    android:textAlignment="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="19dp"/>
+
+                <TextView
+                    android:id="@+id/text_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"/>
+
+                <!--
+                <ImageView
+                    android:id="@+id/myimg"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:scaleType="fitXY"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/qrcode" />-->
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/myimg"
+        android:layout_width="wrap_content"
+        android:layout_height="240dp"
+        android:layout_above="@+id/button_capture"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginBottom="29dp"
+        android:background="@drawable/qrcode"
+        tools:ignore="MissingPrefix,NotSibling" />
+
+    <Button
+        android:id="@+id/button_capture"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="90dp"
+        android:background="#FAF9F7"
+        android:backgroundTint="#E5E5E5"
+        android:text="Register Patient (Scan MRN)"
+        android:layout_gravity="center_horizontal"
+        app:cornerRadius="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:elevation="3dp"
+        app:strokeColor="#640064"
+        android:textAllCaps="false"
+        app:strokeWidth="1dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        app:backgroundTint="#640064"
+        tools:ignore="MissingPrefix,NotSibling" />
+
+
+
+    <TextView
+        android:id="@+id/textOR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="65dp"
+        android:text="- or -"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+
+    <Button
+        android:id="@+id/button_register_manually"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="11dp"
+        android:background="#FAF9F7"
+        android:backgroundTint="#E5E5E5"
+        android:text="Register Patient Manually"
+        android:layout_gravity="center_horizontal"
+        app:cornerRadius="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:elevation="3dp"
+        app:strokeColor="#640064"
+        android:textAllCaps="false"
+        app:strokeWidth="1dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        app:backgroundTint="#640064"
+        tools:ignore="MissingPrefix" />
+
+</RelativeLayout>

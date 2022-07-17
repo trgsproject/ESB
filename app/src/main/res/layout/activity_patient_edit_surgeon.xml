@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientEditSurgeon"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottom_navigation">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <!-- title -->
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="19dp"
+                    android:text="Patient Details"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <!-- ID -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:hint="ID"
+                    android:id="@+id/ed_id"
+                    android:enabled="false"
+                    android:layout_marginTop="5dp"
+                    android:paddingStart="10dp" />
+
+
+                <!-- MRN -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MRN"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:hint="MRN"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:id="@+id/ed_MRN"
+                    android:textSize="16sp"
+                    android:background="@drawable/shape2"
+                    android:paddingStart="10dp" />
+
+
+                <!-- NAME -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:hint="Name"
+                    android:id="@+id/ed_name"
+                    android:textSize="16sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/shape2"
+                    android:paddingStart="10dp" />
+
+
+                <!-- AGE -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Age"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:hint="Age"
+                    android:id="@+id/ed_age"
+                    android:textSize="16sp"
+                    android:background="@drawable/shape2"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:paddingStart="10dp" />
+
+
+                <!-- gender -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp" />
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:hint="Gender"
+                    android:id="@+id/ed_gender"
+                    android:textSize="16sp"
+                    android:background="@drawable/shape2"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:paddingStart="10dp"/>
+
+
+                <!-- nationality -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nationality"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/ed_nation"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp" />
+
+                <!-- radio gp malaysian and non-malaysian-->
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <RadioButton
+                        android:id="@+id/check_Malaysian"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:text="Malaysian"
+                        android:padding="16dp"
+                        android:button="@color/zxing_transparent"
+                        android:background="@drawable/radio_selector"
+                        android:textColor="@drawable/text_color"
+                        android:elevation="4dp"
+                        android:drawableStart="@drawable/malaysian"
+                        android:drawablePadding="15dp"
+                        android:onClick="onRadioButtonClicked"/>
+
+                    <RadioButton
+                        android:id="@+id/check_NonMalaysian"
+                        android:text="Non-Malaysian"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_width="173dp"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:button="@color/zxing_transparent"
+                        android:background="@drawable/radio_selector"
+                        android:textColor="@drawable/text_color"
+                        android:elevation="4dp"
+                        android:drawableStart="@drawable/nonmalaysian"
+                        android:drawablePadding="15dp"
+                        android:onClick="onRadioButtonClicked"/>
+
+
+                </RadioGroup>
+
+
+                <!-- patient race list for malay-->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewRaceList"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Race"
+                    android:textColor="#808080"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="15sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/ed_RaceList"
+                    android:visibility="gone"
+                    android:hint="Race List"
+                    android:saveEnabled="false"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#6B6B6B" />
+
+
+
+                <!-- patient country for non-malay -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Country"
+                    android:visibility="gone"
+                    android:textColor="#808080"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="15sp" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/ed_Country"
+                    android:hint="Country"
+                    android:visibility="gone"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#6B6B6B" />
+
+
+                <!-- ward -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ward"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp" />
+
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:hint="Ward"
+                    android:id="@+id/ed_ward"
+                    android:textSize="16sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/shape2"
+                    android:paddingStart="10dp" />
+
+
+                <!-- surgeon name -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Surgeon Name"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:enabled="false"
+                    android:hint="Surgeon Name"
+                    android:id="@+id/ed_surgeonName"
+                    android:textSize="16sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/shape2"
+                    android:paddingStart="10dp"
+                    android:drawableEnd="@drawable/ic_lock"/>
+
+
+                <!-- diagnosis description -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Diagnosis Description"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:hint="Diagnosis Description"
+                    android:id="@+id/ed_DiagnosisDescription"
+                    android:textSize="16sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/shape2"
+                    android:paddingStart="10dp" />
+
+
+
+                  <!-- Procedure Name 1-->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewProcedureName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Procedure Name*"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp"  />
+
+                <AutoCompleteTextView
+                    android:id="@+id/ed_ProcedureName1"
+                    android:hint="Procedure Name 1"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black"/>
+
+
+                <!-- Procedure Name 2-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ed_ProcedureName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Procedure Name 2"
+                        android:textSize="16sp"
+                        android:background="@drawable/shape2"
+                        android:layout_marginLeft="25dp"
+                        android:paddingStart="10dp"
+                        android:padding="15dp"
+                        android:layout_weight="1" />
+
+
+                    <ImageView
+                        android:id="@+id/image_remove1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:tint="@color/black"
+                        android:layout_marginRight="27dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_close_24"
+                        android:onClick="RemoveProcedureName2"/>
+
+                </LinearLayout>
+
+                <!-- Procedure Name 3-->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ed_ProcedureName3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Procedure Name 3"
+                        android:textSize="16sp"
+                        android:background="@drawable/shape2"
+                        android:layout_marginLeft="25dp"
+                        android:paddingStart="10dp"
+                        android:padding="15dp"
+                        android:layout_weight="1"/>
+
+
+                    <ImageView
+                        android:id="@+id/image_remove2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:tint="@color/black"
+                        android:layout_marginRight="27dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_baseline_close_24"
+                        android:onClick="RemoveProcedureName3"/>
+
+                </LinearLayout>
+
+                <!-- Add Procedure Name -->
+                <TextView
+                    android:id="@+id/buttonAddProcedure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/addProcedure"
+                    android:textColor="#800080"
+                    android:visibility="gone"
+                    android:textAlignment="viewEnd"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:onClick="AddProcedure" />
+
+
+
+                <!-- Sub Specialty -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewsSubSpecialty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sub Specialty"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/ed_SubSpecialty"
+                    android:hint="Sub Specialty"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp"
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_lock"/>
+
+
+
+                <!-- Last Meal Date N Time-->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewLastMeal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Last Meal Date and Time"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/ed_LastMealDateTime"
+                    android:hint="0000-00-00 00:00:00"
+                    android:completionThreshold="1"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp"
+                    android:enabled="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_lock" />
+
+
+
+                <!-- arrival time -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arrival Time"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:textSize="16sp"
+                    android:paddingStart="10dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:hint="0000-00-00 00:00:00"
+                    android:enabled="false"
+                    android:drawableEnd="@drawable/ic_lock"
+                    android:id="@+id/ed_arrivalTime"
+                    android:textSize="16sp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:background="@drawable/shape5"
+                    android:paddingStart="10dp" />
+
+
+                <!-- button update-->
+                <Button
+                    android:id="@+id/buttonUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginEnd="25dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/blue_bg"
+                    android:text="Update"
+                    android:textSize="18sp"
+                    android:onClick="btn_updateData"
+                    android:textColor="#FAF6F6"
+                    android:textStyle="bold"
+                    app:backgroundTint="#640064"
+                    android:textAllCaps="false"
+                    android:layout_marginBottom="20dp"/>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SchedulePatientDetails"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <!-- back button-->
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/leftarrow"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- image banner-->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:src="@drawable/bannerpatient" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-65dp"
+            android:background="@drawable/shape">
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <!-- title-->
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Schedule Patient Details"
+                    android:textColor="@color/black"
+                    android:textSize="25dp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+
+            <ScrollView
+                android:layout_below="@+id/line1"
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="80dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="-16dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+
+                    <!-- mrn -->
+                    <TextView
+                        android:layout_marginTop="15dp"
+                        android:id="@+id/textViewMRN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MRN"
+                        android:textColor="#696969"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="15sp" />
+                    <!-- MRN -->
+                    <TextView
+                        android:id="@+id/textMRN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MRN"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="18sp" />
+
+
+
+                    <!-- patient_name -->
+                    <TextView
+                        android:layout_marginTop="9dp"
+                        android:id="@+id/textViewPatientName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Patient Name"
+                        android:textColor="#696969"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="15sp" />
+                    <!-- patient_name -->
+                    <TextView
+                        android:id="@+id/textPatientName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="PatientName"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="18sp" />
+
+
+                    <!-- otroom -->
+                    <TextView
+                        android:layout_marginTop="9dp"
+                        android:id="@+id/textViewOTRoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OT Room"
+                        android:textColor="#696969"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="15sp" />
+                    <!-- OTRoom -->
+                    <TextView
+                        android:id="@+id/textOTRoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OT Room"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="18sp" />
+
+
+
+                    <!-- category -->
+                    <TextView
+                        android:layout_marginTop="9dp"
+                        android:id="@+id/textViewCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textColor="#696969"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="15sp" />
+                    <!-- Category -->
+                    <TextView
+                        android:id="@+id/textCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Category"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="18sp" />
+
+
+
+                    <!-- surgery_date -->
+                    <TextView
+                        android:layout_marginTop="9dp"
+                        android:id="@+id/textViewSurgeryDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Surgery Date"
+                        android:textColor="#696969"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="15sp" />
+                    <!-- surgery_date -->
+                    <TextView
+                        android:id="@+id/textSurgeryDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Surgery Date"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="18sp" />
+
+
+                    <!--Surgery Call Time and Arrival Time-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        tools:layout_editor_absoluteX="-16dp"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <LinearLayout
+                            android:layout_below="@+id/linearL3"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteX="-16dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+                            <TextView
+                                android:id="@+id/textViewCallTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Call Time"
+                                android:textColor="#696969"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/textCallTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00:00:00"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_below="@+id/linearL4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteX="-16dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+
+                            <TextView
+                                android:id="@+id/textViewArrivalTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Arrival Time"
+                                android:textColor="#696969"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/textArrivalTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00:00:00"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!--Surgery Start Time and Surgery End Time-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        tools:layout_editor_absoluteX="-16dp"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <LinearLayout
+                            android:layout_below="@+id/linearL3"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteX="-16dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+                            <TextView
+                                android:id="@+id/textViewSurgeryStartTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Surgery Start Time"
+                                android:textColor="#696969"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/textTimeSurgeryStartTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="00:00:00"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_below="@+id/linearL4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteX="-16dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+
+                            <TextView
+                                android:id="@+id/textViewSurgeryEndTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Surgery End Time"
+                                android:textColor="#696969"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/textSurgeryEndTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="0000"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!-- Surgery duration -->
+                    <TextView
+                        android:layout_marginTop="9dp"
+                        android:id="@+id/textViewSurgeryDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Surgery Duration"
+                        android:textColor="#696969"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="15sp" />
+
+
+                    <TextView
+                        android:id="@+id/textSurgeryDuration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0000"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="18sp" />
+
+
+
+                    <!--PHU ID Bed and PHU Start Time-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        tools:layout_editor_absoluteX="-16dp"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <LinearLayout
+                            android:layout_below="@+id/linearL3"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteX="-16dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+
+                            <TextView
+                                android:id="@+id/textViewPHUStartTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="PHU Start Time"
+                                android:textColor="#696969"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/textPHUStartTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_below="@+id/linearL4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteX="-16dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+
+                            <TextView
+                                android:id="@+id/textViewPHUIDBed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="PHU ID Bed"
+                                android:textColor="#696969"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/textPHUIDBed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                    <!--PACU ID Bed and PACU Start Time-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        tools:layout_editor_absoluteX="-16dp"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <LinearLayout
+                            android:layout_below="@+id/linearL3"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteX="-16dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+
+
+                            <TextView
+                                android:id="@+id/textViewPACUStartTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="PACU Start Time"
+                                android:textColor="#696969"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/textPACUStartTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_below="@+id/linearL4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteX="-16dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+                            <TextView
+                                android:id="@+id/textViewPACUIDBed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="PACU ID Bed"
+                                android:textColor="#696969"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/textPACUIDBed"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="-"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <!--bottom navigation-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation_anes"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

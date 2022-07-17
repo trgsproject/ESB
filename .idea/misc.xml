@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Muhammad Aliff Irfan/Desktop/Projek APPS/ESA/app/src/main/res/layout/activity_category.xml" value="0.264" />
+        <entry key="..\:/Users/Muhammad Aliff Irfan/Desktop/Projek APPS/ESA/app/src/main/res/layout/activity_main.xml" value="0.128" />
+        <entry key="..\:/Users/Muhammad Aliff Irfan/Desktop/Projek APPS/ESA/app/src/main/res/layout/activity_patient_edit_anesthetist.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/Muhammad Aliff Irfan/Desktop/Projek APPS/ESA/app/src/main/res/layout/activity_patient_edit_diagnosis.xml" value="0.16944444444444445" />
+        <entry key="..\:/Users/Muhammad Aliff Irfan/Desktop/Projek APPS/ESA/app/src/main/res/layout/activity_patient_edit_diagnosis_nurse.xml" value="0.1" />
+        <entry key="..\:/Users/Muhammad Aliff Irfan/Desktop/Projek APPS/ESA/app/src/main/res/layout/activity_patient_view_details_anesthetist.xml" value="0.1" />
+        <entry key="..\:/Users/Muhammad Aliff Irfan/Desktop/Projek APPS/ESA/app/src/main/res/layout/activity_personal_details.xml" value="0.12670765027322403" />
+        <entry key="..\:/Users/Muhammad Aliff Irfan/Desktop/Projek APPS/ESA/app/src/main/res/layout/activity_register_schedule.xml" value="0.1" />
+        <entry key="..\:/Users/Muhammad Aliff Irfan/Desktop/Projek APPS/ESA/app/src/main/res/layout/activity_waiting_patient_details.xml" value="0.16944444444444445" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

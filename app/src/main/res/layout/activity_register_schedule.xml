@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterSchedule"
+    android:orientation="vertical"
+    android:background="#0E1822">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <!-- title -->
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="19dp"
+                    android:text="Register Schedule OT"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textID"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textStatus"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="18sp" />
+
+                <!-- id patient -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewMRN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MRN"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textMRN"
+                    android:hint="MRN"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:ems="10"
+                    android:background="@drawable/shape5"
+                    android:textColor="#808080"
+                    android:textColorHint="#6B6B6B"
+                    android:enabled="false"
+                    android:drawableEnd="@drawable/ic_baseline_lock_24"
+                    android:drawablePadding="15dp"
+                    android:padding="15dp" />
+
+
+                <!-- name patient -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Patient Name"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textName"
+                    android:hint="Patient Name"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape5"
+                    android:padding="15dp"
+                    android:textColor="#808080"
+                    android:textColorHint="#6B6B6B"
+                    android:enabled="false"
+                    android:drawableEnd="@drawable/ic_baseline_lock_24"/>
+
+
+                <!-- category -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Category"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp"  />
+
+                <EditText
+                    android:id="@+id/textCategory"
+                    android:hint="-"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:enabled="false"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:padding="15dp"
+                    android:textColor="#808080"
+                    android:textColorHint="#6B6B6B"
+                    android:background="@drawable/shape5"
+                    android:drawableEnd="@drawable/ic_baseline_lock_24"/>
+
+
+
+                <!-- Surgery Date -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewSurgeryDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Surgery Date"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp"  />
+
+                <EditText
+                    android:id="@+id/textSurgeryDate"
+                    android:hint="0000-00-00"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:enabled="false"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:padding="15dp"
+                    android:textColor="#808080"
+                    android:textColorHint="#6B6B6B"
+                    android:background="@drawable/shape5"
+                    android:drawableEnd="@drawable/ic_baseline_lock_24"/>
+
+
+                <!-- Call Time -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewCallTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Call Time*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textCallTime"
+                    android:hint="00:00:00"
+                    android:completionThreshold="1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_baseline_access_time_24"
+                    android:textColor="@color/black"/>
+
+
+                <!-- b.	Arrival time patient to OT  -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewArrivalTimeToOT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arrival time patient to OT*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textArrivalTimeToOT"
+                    android:hint="00:00:00"
+                    android:completionThreshold="1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_baseline_access_time_24"
+                    android:textColor="@color/black"/>
+
+
+                <!-- patient Book OT -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewBookOT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="OT room*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <Spinner
+                    android:id="@+id/textOT"
+                    android:hint="Book OT"
+                    android:completionThreshold="1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black" />
+
+
+                <!-- Surgery Start Time -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewSurgeryStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Surgery Start Time*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textSurgeryStartTime"
+                    android:hint="00:00:00"
+                    android:completionThreshold="1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_baseline_access_time_24"
+                    android:textColor="@color/black"/>
+
+
+                <!-- Surgery End Time -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewSurgeryEndTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Surgery End Time*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textSurgeryEndTime"
+                    android:hint="00:00:00"
+                    android:completionThreshold="1"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_baseline_access_time_24"
+                    android:textColor="@color/black"/>
+
+
+                <!-- PHU Start Time -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewPHUStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PHU Start Time*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textPHUStartTime"
+                    android:hint="PHU Start Time"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_baseline_access_time_24"
+                    android:textColor="@color/black"/>
+
+
+                <!-- PACU Start Time -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewPACUStartTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PACU Start Time*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textPACUStartTime"
+                    android:hint="PACU Start Time"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:drawableEnd="@drawable/ic_baseline_access_time_24"
+                    android:textColor="@color/black"/>
+
+
+                <!-- PHU ID Bed  -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewPHUIDBed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PHU ID Bed*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textPHUIDBed"
+                    android:hint="Bed"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black" />
+
+
+                <!-- PACU ID Bed  -->
+                <TextView
+                    android:layout_marginTop="7dp"
+                    android:id="@+id/textViewPACUIDBed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PACU ID Bed*"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textColor="#808080"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/textPACUIDBed"
+                    android:hint="Bed"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textSize="16sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawablePadding="15dp"
+                    android:ems="10"
+                    android:background="@drawable/shape2"
+                    android:padding="15dp"
+                    android:textColor="@color/black" />
+
+
+                <!-- button cancel and save -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    tools:layout_editor_absoluteX="-16dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <Button
+                        android:id="@+id/buttonCancel"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/red_bg"
+                        android:text="Cancel"
+                        android:layout_marginRight="5dp"
+                        android:textAllCaps="false"
+                        android:textColor="#FAF6F6"
+                        android:textStyle="bold"
+                        app:backgroundTint="#FF0000"
+                        app:cornerRadius="10dp"
+                        android:onClick="Cancel"
+                        app:elevation="3dp"
+                        app:strokeColor="#FF0000"
+                        app:strokeWidth="1dp" />
+
+                    <Button
+                        android:id="@+id/buttonSave"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/green_bg"
+                        android:text="Create"
+                        android:layout_marginLeft="5dp"
+                        android:textAllCaps="false"
+                        android:textColor="#FAF6F6"
+                        android:textStyle="bold"
+                        app:backgroundTint="#32CD32"
+                        app:cornerRadius="10dp"
+                        app:elevation="3dp"
+                        app:strokeColor="#32CD32"
+                        app:strokeWidth="1dp"
+                        android:onClick="Save"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</RelativeLayout>

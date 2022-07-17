@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PatientViewDetailsSurgeon"
+    android:orientation="vertical">
+
+    <!-- button back-->
+    <ImageView
+        android:id="@+id/buttonBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/leftarrow"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="300dp"
+            android:layout_height="190dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="60dp"
+            android:src="@drawable/bannerpatient" />
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-105dp"
+            android:background="@drawable/shape">
+
+
+            <LinearLayout
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <TextView
+                    android:id="@+id/textTitle"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Patient Details"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_marginTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="-16dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+
+                    <!-- ID -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:hint="ID"
+                        android:id="@+id/txtID"
+                        android:enabled="false"
+                        android:paddingStart="10dp" />
+
+
+                    <!-- MRN Code -->
+                    <TextView
+                        android:layout_below="@id/line1"
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/textViewMRN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MRN"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtMRN"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="MRN"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp" />
+
+                    <!-- Name -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"/>
+
+
+                    <!--age and gender-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        tools:layout_editor_absoluteX="-16dp"
+                        tools:layout_editor_absoluteY="0dp">
+
+                        <LinearLayout
+                            android:layout_below="@+id/linearL3"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteX="-16dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+                            <TextView
+                                android:id="@+id/textViewAge"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Age"
+                                android:textColor="#808080"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/txtage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Age"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_below="@+id/linearL4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            tools:layout_editor_absoluteX="-16dp"
+                            tools:layout_editor_absoluteY="0dp">
+
+
+                            <TextView
+                                android:id="@+id/textViewGender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gender"
+                                android:textColor="#808080"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/txtgender"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gender"
+                                android:textAllCaps="true"
+                                android:textStyle="bold"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <!-- Nationality -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewNationality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nationality"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtNationality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Nationality"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"/>
+
+
+                    <!-- Race -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewRace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Race"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtRace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="race"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"/>
+
+                    <!-- Country -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Country"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Country"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"/>
+
+
+                    <!-- Ward -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewWard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ward Name"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtWard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ward"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"/>
+
+                    <!-- View More Details -->
+                    <TextView
+                        android:id="@+id/buttonViewMoreDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="View More Details"
+                        android:textColor="#800080"
+                        android:layout_marginTop="8dp"
+                        android:textAlignment="viewEnd"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:onClick="ViewMoreDetails" />
+
+
+                    <!-- Surgeon Name -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewSurgicalTeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Surgeon Name"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtSurgicalTeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Surgeon Name"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- Diagnosis Description -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewDiagnosisDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diagnosis Description"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtDiagnosisDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Diagnosis Description"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- Procedure Name 1-->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewProcedureName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Procedure Name 1"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtProcedureName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Procedure Name"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- Procedure Name 2-->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewProcedureName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Procedure Name 2"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtProcedureName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Procedure Name 2"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- Procedure Name 3-->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewProcedureName3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Procedure Name 3"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtProcedureName3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Procedure Name 3"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- Sub Specialty -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewSubSpeciality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Specialty"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtSubSpeciality"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Specialty"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- Last Meal -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewLastMeal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Last Meal"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtLastMeal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0000-00-00 00:00:00"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- Inform Anesthetist -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewInformedAnaesthetist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Have you informed the Anaesthetist?"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtInformedAnaesthetist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yes/No"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- Anesthetist Name -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewAnaesthetistName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Anaesthetist Name"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtAnaesthetistName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- High Dependency Area -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewHighDependencyArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Require High Dependency Area?"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtHighDependencyArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Yes/No"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- Arrival Time -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewTimeArrival"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Arrival Time"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtTimeArrival"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0000-00-00 00:00:00"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- Approved Time -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewApprovedTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Approval Time"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/txtApprovalTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="0000-00-00 00:00:00"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+
+                    <!-- Approved status -->
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/textViewApprovedStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Approved Status"
+                        android:textColor="#808080"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/textApprovedStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Done/Pending"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+
+
+                    <!-- View Less Details -->
+                    <TextView
+                        android:id="@+id/buttonViewLessDetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="View Less Details"
+                        android:layout_marginTop="8dp"
+                        android:textColor="#800080"
+                        android:textAlignment="viewEnd"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginEnd="30dp"
+                        android:visibility="gone"
+                        android:onClick="ViewLessDetails" />
+
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="60dp" />
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <!-- bottom navigation-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

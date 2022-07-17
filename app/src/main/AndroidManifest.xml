@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.esa">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.Reciever" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera2" />
+    <uses-feature android:name="android.hardware.camera.any" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ESA"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".PatientEditAnesthetist"></activity>
+        <activity android:name=".PatientViewDetailsAnesthetist" />
+        <activity android:name=".PatientEditSurgeon" />
+        <activity android:name=".PatientViewDetailsSurgeon" />
+        <activity android:name=".PatientListSurgeon" />
+        <activity android:name=".RegisterSchedule" />
+        <activity android:name=".NewSurgeon" />
+        <activity
+            android:name=".WaitingPatientListNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WaitingPatientDetailsNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SurgeonListForAnaesthetist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NurseListForSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AnesthetistListForSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SurgeonListForNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AnesthetistListForNuse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CategorySurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WaitingPatientDetailsSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SchedulePatientDetailsSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientEditDiagnosisSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientDetailsDiagnosisSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WaitingPatientListSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScheduleListSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePasswordSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DashboardSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PersonalDetailsSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingSurgeon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Category"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SchedulePatientDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WaitingPatientDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScheduleList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WaitingPatientList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NewPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientEditDiagnosisNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientDetailsDiagnosisNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DiagnosisList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatientManually"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientEditDiagnosis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientDetailsDiagnosis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterDiagnosis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientListAnes"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PersonalDetailsNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePasswordForNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutForNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientEditDetailsNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientViewDetailsNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ClassifyCategory"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatientNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DashboardNurse"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientViewDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PatientEditDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatientDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Dashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PersonalDetails"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatientAfterLogin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".About"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegisterPatient"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChangePassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Testing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Splashscreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
+
+        <service
+            android:name=".messaging.FirebaseService"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.Send">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.Recieve" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

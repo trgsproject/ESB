@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    tools:context=".CategorySurgeon">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="#48D1CC"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/textViewPatientID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MRN: N123456"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:freezesText="true"/>
+
+            <TextView
+                android:id="@+id/textViewPatientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Name: ALIF IRFAN"
+                android:layout_below="@+id/textViewPatientID"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:freezesText="true"/>
+
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rounded_button"
+                android:backgroundTint="#f4ca16"
+                android:gravity="center"
+                android:text="?"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <!-- cannot view by user-->
+            <TextView
+                android:id="@+id/textID"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <!-- cannot view by user-->
+            <TextView
+                android:id="@+id/textViewPatientIDText"
+                android:layout_width="0dp"
+                android:layout_height="0dp" />
+            <!-- cannot view by user-->
+            <TextView
+                android:id="@+id/textViewPatientNameText"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <!-- cannot view by user-->
+            <TextView
+                android:id="@+id/textViewAnaesthetistName"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <!-- cannot view by user-->
+            <TextView
+                android:id="@+id/textViewQuestion"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <!-- cannot view by user-->
+            <TextView
+                android:id="@+id/textArrivalTime"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+            <!-- cannot view by user-->
+            <TextView
+                android:id="@+id/textBookSurgeryTime"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-60dp"
+            android:padding="5dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:padding="5dp"
+                app:cardBackgroundColor="#ffffff"
+                app:cardElevation="10dp"
+                app:cardCornerRadius="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/text_view_question"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/col4"
+                        android:textColor="@color/black"
+                        android:freezesText="true" />
+
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!--nanti tukar balik dkt radio button android:layout_width=360dp-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/mybutton2">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <RadioButton
+                    android:id="@+id/q1"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="10dp"
+                    android:freezesText="true"
+                    android:padding="10dp"
+                    android:text="@string/row1b"
+                    android:textColor="#7A8089"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:id="@+id/q2"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="10dp"
+                    android:freezesText="true"
+                    android:padding="10dp"
+                    android:text="@string/row2b"
+                    android:textColor="#7A8089"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:id="@+id/q3"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="10dp"
+                    android:freezesText="true"
+                    android:padding="10dp"
+                    android:text="@string/row3b"
+                    android:textColor="#7A8089"
+                    android:onClick="onRadioButtonClicked"/>
+
+                <RadioButton
+                    android:id="@+id/q4"
+                    android:layout_width="360dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="10dp"
+                    android:freezesText="true"
+                    android:padding="10dp"
+                    android:text="@string/row4b"
+                    android:textColor="#7A8089"
+                    android:onClick="onRadioButtonClicked"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <!-- button cancel and save -->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="-60dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            tools:layout_editor_absoluteX="-16dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <Button
+                android:id="@+id/buttonCancelCategory"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/green_bg"
+                android:text="Cancel"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:textAllCaps="false"
+                android:textColor="#FAF6F6"
+                android:textStyle="bold"
+                app:backgroundTint="#FF0000"
+                app:cornerRadius="10dp"
+                app:elevation="3dp"
+                app:strokeColor="#FF0000"
+                app:strokeWidth="1dp"/>
+
+            <Button
+                android:id="@+id/buttonSaveCategory"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:background="@drawable/red_bg"
+                android:layout_marginLeft="5dp"
+                android:textAllCaps="false"
+                android:textColor="#FAF6F6"
+                android:textStyle="bold"
+                android:text="Save"
+                app:backgroundTint="#32CD32"
+                app:cornerRadius="10dp"
+                app:elevation="3dp"
+                app:strokeColor="#32CD32"
+                app:strokeWidth="1dp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
